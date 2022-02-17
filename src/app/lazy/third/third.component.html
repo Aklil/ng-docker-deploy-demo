@@ -1,0 +1,18 @@
+<p>third works!</p>
+
+<div>
+  <form [formGroup]="passwordForm">
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password">
+    </div>
+    <br>
+    <div>
+      <label for="confirm-password"> Confirm Password</label>
+      <input id="confirm-password" type="password" formControlName="confirmPassword">
+    </div>
+    <br>
+    <strong [style.color]="'red'" *ngIf="passwordForm.errors?.passwordsDoNotMatch">Passwords do not match</strong>
+    <div>IsValid: {{passwordForm.valid}}</div>
+  </form>
+</div>

@@ -1,0 +1,8 @@
+<p>first works!</p>
+
+<ul>
+ <li *ngFor="let user of users$ | async">
+     <h2 appHover>Name: {{user.name}}</h2>
+     <h4>Email: {{user.email}}</h4>
+ </li>
+</ul>
